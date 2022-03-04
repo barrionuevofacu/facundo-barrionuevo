@@ -6,7 +6,6 @@ import java.util.List;
 public class Grupo extends Usuario{
 
 	private List<Persona> personas;
-	private int notificaciones;
 	
 	public Grupo() {
 		super();
@@ -29,14 +28,6 @@ public class Grupo extends Usuario{
 		this.personas.addAll(personas);
 	}
 	
-	public int getNotificaciones() {
-		return notificaciones;
-	}
-
-	public void setNotificaciones(int notificaciones) {
-		this.notificaciones = notificaciones;
-	}
-
 	@Override
 	public void notificar(Mensaje msj) {
 		for (Persona p : personas) {
